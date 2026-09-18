@@ -1,0 +1,9 @@
+{
+  "collections": [
+    {"slug":"new-arrivals","title":"New Arrivals","eyebrow":"01 / THE LATEST","description":"I nuovi ingressi selezionati da Flip&Co.","filter":{"badge":"NEW"}},
+    {"slug":"icons","title":"Icons","eyebrow":"02 / ESSENTIALS","description":"I pezzi che non hanno bisogno di presentazioni.","filter":{"badge":"ICON"}},
+    {"slug":"technical","title":"Technical","eyebrow":"03 / FUNCTION","description":"Materiali tecnici, protezione e movimento.","filter":{"badge":"TECH"}},
+    {"slug":"kids","title":"Kids","eyebrow":"04 / YOUNG","description":"La selezione Flip&Co per i più giovani.","filter":{"category":"Kids"}},
+    {"slug":"sneakers","title":"Sneakers","eyebrow":"05 / FOOTWEAR","description":"Sneakers e modelli che definiscono il look.","filter":{"type":"sneaker"}}
+  ]
+}
