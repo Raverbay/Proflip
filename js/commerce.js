@@ -1,1 +1,10 @@
-(()=>{const KEY='flipco_cart_v2';const get=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return[]}};const set=a=>localStorage.setItem(KEY,JSON.stringify(a));window.FLIPCO_CART={items:get,count:()=>get().reduce((n,x)=>n+x.qty,0),add:(p,size)=>{const a=get(),i=a.find(x=>x.id===p.id&&x.size===size);i?i.qty++:a.push({id:p.id,size,qty:1});set(a);document.dispatchEvent(new Event('cart:change'))},remove:(id,size)=>{set(get().filter(x=>!(x.id===id&&x.size===size)));document.dispatchEvent(new Event('cart:change'))},clear:()=>{set([]);document.dispatchEvent(new Event('cart:change'))},total:ps=>get().reduce((n,x)=>{const p=ps.find(p=>p.id===x.id);return n+(p?p.price*x.qty:0)},0)}})();
+(()=>{
+const KEY='flipco_bag_v1';
+const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch{return[]}};
+const write=a=>{localStorage.setItem(KEY,JSON.stringify(a));document.dispatchEvent(new CustomEvent('cart:change'))};
+window.FLIPCO_CART={
+ items:()=>read(), count:()=>read().reduce((n,x)=>n+x.qty,0),
+ add:(id,size,qty=1)=>{const a=read(),x=a.find(i=>i.id===id&&i.size===size);x?x.qty+=qty:a.push({id,size,qty});write(a)},
+ remove:(id,size)=>write(read().filter(i=>!(i.id===id&&i.size===size))),
+ clear:()=>write([]), total:ps=>read().reduce((t,x)=>{const p=ps.find(p=>p.id===x.id);return t+(p?Number(p.price)*x.qty:0)},0)
+};})();
