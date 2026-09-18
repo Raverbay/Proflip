@@ -1,1 +1,1 @@
-const file=document.getElementById('file'),out=document.getElementById('out');file.addEventListener('change',async()=>{const f=file.files[0];if(f)out.textContent=await f.text()});
+document.querySelector('#file').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>document.querySelector('#out').textContent=r.result.slice(0,8000);r.readAsText(f)};
