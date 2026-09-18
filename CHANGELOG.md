@@ -8,3 +8,13 @@
 - Demo checkout and confirmation flow.
 - One-inventory model preserved.
 - Local fallback data allows core pages to work in file preview where browser fetch is restricted.
+
+## V5 — 2026-09-18
+- Reworked catalog around the researched New Balance, Barrow, Moschino and Dsquared2 selection.
+- Added official product URLs and image CDNs where accessible.
+- Added DSQUARED2 D2Kids Junior Jeans.
+- Removed duplicate DSQUARED2 puffer entry.
+- Fixed shop count initialization and improved product cards.
+- Added PDP source verification note, official-brand link and go-live inventory disclaimer.
+- Added cookie bar and responsive commerce polish.
+- Converted checkout wording to an order-request flow pending payment-provider integration.

@@ -1,4 +1,4 @@
-# Flip&Co — Fresh Start V1
+# Flip&Co — V5 / Sales-ready static build
 
 Standalone static commerce/editorial site for Flip&Co Cagliari.
 
@@ -11,6 +11,16 @@ Standalone static commerce/editorial site for Flip&Co Cagliari.
 
 ## Deploy
 Upload the repository contents to GitHub Pages. The project is static and requires no build step.
+
+## V5 improvements
+- Curated 9-product catalog with current official brand source links.
+- Replaced broken homepage/product image endpoints with official image CDN URLs where available, with local fallbacks.
+- Removed the duplicate DSQUARED2 editorial product.
+- Added verified DSQUARED2 Kids jeans product.
+- Fixed Shop filter/count rendering bug.
+- Added official product-source link and availability disclaimer on PDP.
+- Added cookie/technical-consent bar and stronger mobile/e-commerce polish.
+- Checkout copy now behaves as an order-request flow until a real payment provider is connected.
 
 ## Production before go-live
 - Replace remote catalog image URLs with licensed/local/CDN assets.

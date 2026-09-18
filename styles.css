@@ -43,3 +43,51 @@ body{background:var(--paper);letter-spacing:-.012em}
 .store-section{padding-top:150px;padding-bottom:160px}.store-photo{min-height:720px}.store-copy h2{font-size:clamp(70px,9vw,145px);line-height:.75;letter-spacing:-.09em}.store-copy p{font-size:20px;max-width:510px}.store-data{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin:50px 0 28px}.store-data>*{padding:14px 0;font:9px 'DM Mono',monospace;letter-spacing:.08em}.closing-home{padding:150px 0;background:#080808;color:#f4f0e8}.closing-home h2{font-size:clamp(100px,14vw,230px);line-height:.68;letter-spacing:-.1em}.footer{background:#111;color:#f2eee7}.footer a,.footer span{color:#aaa59d}.footer-brand p{color:#aaa59d}.footer-bottom{border-color:#333}
 @media(max-width:900px){.hero-stage{grid-template-columns:1fr}.hero-side{min-height:43svh;border-right:0;border-bottom:1px solid #c8c1b7}.hero-image{height:68svh;min-height:510px}.hero-stamp{display:none}.kids-edit,.street-edit{grid-template-columns:repeat(2,1fr)}.street-intro{display:block}.street-intro p{margin-top:35px}.hero-intro{align-items:flex-end}.hero-title{font-size:clamp(64px,15vw,115px)}}
 @media(max-width:560px){.hero-side{min-height:49svh;padding-top:24px}.hero-title{font-size:clamp(58px,17vw,91px)}.hero-intro{gap:12px}.hero-intro p{max-width:190px}.hero-image{height:65svh;min-height:480px}.hero-product h1{font-size:40px}.hero-frame{inset:12px}.hero-product{left:18px;bottom:18px}.hero-counter{right:18px;top:18px}.kids-edit,.street-edit{grid-template-columns:1fr 1fr;gap:8px}.kids-card b{font-size:14px}.street-card span{font-size:7px}.editorial-band{padding-bottom:100px}.editorial-dark{padding:95px 0}.street-intro h2{font-size:80px}.manifesto{padding-top:100px;padding-bottom:100px}.worlds,.brands-home,.store-section{padding-top:100px;padding-bottom:110px}}
+
+/* FLIP&CO V5 / CONVERSION + POLISH */
+::selection{background:#0a0a0a;color:#f3f0e9}
+.shop-bar{position:sticky;top:74px;z-index:40;background:rgba(241,238,232,.96);backdrop-filter:blur(14px)}
+.shop-img{box-shadow:inset 0 0 0 1px rgba(10,10,10,.04)}
+.shop-img span{z-index:2}
+.shop-img .sale-dot{position:absolute;right:12px;top:12px;left:auto;background:#0a0a0a;color:#fff;padding:7px 9px;font:8px 'DM Mono',monospace;letter-spacing:.1em;font-style:normal}
+.shop-meta strong{white-space:nowrap}
+.shop-meta del,.pdp-price del{color:var(--muted);font-weight:400}
+.source-note{font:9px/1.45 'DM Mono',monospace;letter-spacing:.03em;color:var(--muted);border-left:1px solid var(--ink);padding-left:12px;margin:-15px 0 32px;max-width:540px}
+.official-link,.whatsapp-link{display:block;border-top:1px solid var(--ink);padding:15px 0;font:9px 'DM Mono',monospace;letter-spacing:.12em}
+.official-link{margin-top:28px}
+.whatsapp-link{color:var(--muted)}
+.cookie-bar{position:fixed;left:18px;right:18px;bottom:18px;z-index:100;background:#0a0a0a;color:#f4f0e8;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:24px;box-shadow:0 15px 50px rgba(0,0,0,.2)}
+.cookie-bar>div:first-child{display:grid;gap:5px}
+.cookie-bar b,.cookie-bar a,.cookie-bar button{font:8px 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
+.cookie-bar span{font:10px/1.35 Manrope,Arial,sans-serif;color:#aaa59d}
+.cookie-bar>div:last-child{display:flex;align-items:center;gap:18px;flex:none}
+.cookie-bar a{color:#aaa59d}
+.cookie-bar button{border:1px solid #777;background:#f4f0e8;color:#0a0a0a;padding:9px 13px;cursor:pointer}
+.pdp-info{background:var(--paper)}
+.pdp-media img{background:#fff}
+.hero-image img,.edit-img img,.rail-img img,.kids-card img,.street-card img{background:#fff}
+@media(max-width:900px){
+ .shop-bar{top:74px}
+ .pdp{grid-template-columns:1fr}
+ .pdp-media{position:relative;top:0;height:72svh;min-height:480px}
+ .pdp-info{padding-bottom:100px}
+ .shop-grid{grid-template-columns:repeat(2,1fr);gap:38px 8px}
+ .checkout-grid{grid-template-columns:1fr;gap:70px}
+}
+@media(max-width:560px){
+ .utility span:nth-child(2){display:none}
+ .utility{font-size:8px}
+ .desktop-nav{display:none}
+ .header-inner{grid-template-columns:1fr auto 1fr}
+ .brandmark img{width:100px}
+ .shop-bar{position:relative;top:0}
+ .shop-grid{padding-bottom:100px}
+ .shop-meta{gap:5px}
+ .shop-meta b{font-size:12px}
+ .shop-meta strong{font-size:10px}
+ .cookie-bar{left:0;right:0;bottom:0;padding:14px;align-items:flex-end}
+ .cookie-bar span{max-width:240px}
+ .cookie-bar>div:last-child{gap:10px}
+ .pdp-media{height:62svh;min-height:420px}
+ .pdp-info h1{font-size:clamp(58px,17vw,88px)}
+}
