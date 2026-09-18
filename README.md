@@ -1,32 +1,20 @@
-# Flip&Co — Production Deploy Base V1
+# Flip&Co — Fresh Start V1
 
-Standalone static repository, rebuilt from scratch. No dependency on previous V18/V27/V29/V30/V31 files.
+Standalone static commerce/editorial site for Flip&Co Cagliari.
 
-## Public pages
-- `index.html` — editorial homepage
-- `shop.html` — product catalog with category filters
-- `collections.html` — collection index
-- `collection.html?slug=new-arrivals` — dynamic collection page
-- `brand.html` — brand index
-- `product.html?id=...` — dynamic product detail
-- `checkout.html` — demo checkout
-- `order-confirmation.html` — demo confirmation
-- `faq.html`, `shipping.html`, `returns.html`, `privacy.html`, `cookies.html`, `terms.html`
-
-## Data
-- `data/products.json` — single demo inventory
-- `data/collections.json` — collection definitions
-- `data/site.json` — store/contact data
-- `data/imported-stock.csv` — demo CSV
+## Structure
+- Home / Shop / Collections / Collection / Brand Index / Product
+- Cart / demo checkout / confirmation
+- Legal + FAQ pages
+- Admin import demo
+- Single inventory source in `data/products.json`
 
 ## Deploy
-The repository is static and can be deployed directly to GitHub Pages from the repository root.
+Upload the repository contents to GitHub Pages. The project is static and requires no build step.
 
-For local preview, use a static server because the pages load JSON through `fetch()`:
-
-`python3 -m http.server 8080`
-
-Then open `/index.html`.
-
-## Go-live requirements
-This package is a complete front-end deploy base, but checkout and inventory are still demo/local. Before real sales: connect a backend inventory/OMS, authenticated admin, payment provider, order management, shipping, transactional email, consent/analytics, authorized product photography, definitive legal texts and production domain configuration.
+## Production before go-live
+- Replace remote catalog image URLs with licensed/local/CDN assets.
+- Connect real inventory backend.
+- Connect payment provider and order service.
+- Complete legal/cookie configuration.
+- Add production analytics, sitemap, robots and structured product data.
